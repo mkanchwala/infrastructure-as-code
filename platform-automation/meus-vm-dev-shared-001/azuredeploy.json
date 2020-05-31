@@ -4,20 +4,21 @@
     "parameters": {
         "vmName": {
             "type": "string",
-            "defaultValue": "simpleLinuxVM",
+            "defaultValue": "meus-vm-dev-shared-001",
             "metadata": {
                 "description": "The name of you Virtual Machine."
             }
         },
         "adminUsername": {
             "type": "string",
+            "defaultValue": "azureadmin",
             "metadata": {
                 "description": "Username for the Virtual Machine."
             }
         },
         "authenticationType": {
             "type": "string",
-            "defaultValue": "password",
+            "defaultValue": "Azure@123",
             "allowedValues": [
                 "sshPublicKey",
                 "password"
@@ -34,7 +35,7 @@
         },
         "dnsLabelPrefix": {
             "type": "string",
-            "defaultValue": "[toLower(concat('simplelinuxvm-', uniqueString(resourceGroup().id)))]",
+            "defaultValue": "meus-dns-dev-shared-001",
             "metadata": {
                 "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
             }
@@ -61,28 +62,28 @@
         },
         "VmSize": {
             "type": "string",
-            "defaultValue": "Standard_B2s",
+            "defaultValue": "Standard_B1s",
             "metadata": {
                 "description": "The size of the VM"
             }
         },
         "virtualNetworkName": {
             "type": "string",
-            "defaultValue": "vNet",
+            "defaultValue": "meus-vnet-dev-shared-001",
             "metadata": {
                 "description": "Name of the VNET"
             }
         },
         "subnetName": {
             "type": "string",
-            "defaultValue": "Subnet",
+            "defaultValue": "meus-vm-dev-shared-001",
             "metadata": {
                 "description": "Name of the subnet in the virtual network"
             }
         },
         "networkSecurityGroupName": {
             "type": "string",
-            "defaultValue": "SecGroupNet",
+            "defaultValue": "meus-nsg-dev-shared-001",
             "metadata": {
                 "description": "Name of the Network Security Group"
             }
